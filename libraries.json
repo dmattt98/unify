@@ -1,7 +1,7 @@
 {
-	"jquery": "http://code.jquery.com/jquery-1.10.2.min.js",
-	"fittext": "http://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js",
-	"cookies": "http://cdnjs.cloudflare.com/ajax/libs/Cookies.js/0.3.1/cookies.min.js",
-	"moment": "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js",
-	"modernizr": "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"
+	"jquery": {"latest": "http://code.jquery.com/jquery-1.10.2.min.js", "2.0.3": "http://code.jquery.com/jquery-2.0.3.min.js"},
+	"fittext": {"latest": "http://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"},
+	"cookies": {"latest": "http://cdnjs.cloudflare.com/ajax/libs/Cookies.js/0.3.1/cookies.min.js"},
+	"moment": {"latest": "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js", "2.3.1": "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.3.1/moment.min.js", "2.2.1": "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.2.1/moment.min.js"},
+	"modernizr": {"latest": "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js", "2.6.2": "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js", "2.6.1": "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js"}
 }
