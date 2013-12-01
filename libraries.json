@@ -1,0 +1,7 @@
+{
+	"jquery": "http://code.jquery.com/jquery-1.10.2.min.js",
+	"fittext": "http://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js",
+	"cookies": "http://cdnjs.cloudflare.com/ajax/libs/Cookies.js/0.3.1/cookies.min.js",
+	"moment": "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js",
+	"modernizr": "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"
+}
