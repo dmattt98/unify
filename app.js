@@ -11,7 +11,8 @@ app.get('/one/*', function(req, res) {
 		urls = '';
 
 	for(var i = 0; i < requested.length; i++) {    // for loop to add the library url to urls separated by <br> tags
-		urls += (libs[requested[i]] + '<br>');
+		if (typeof libs[requested[i]] !== 'undefined')    // checks to make sure the library is listed
+			urls += (libs[requested[i]] + '<br>');
 	}
 
 	res.send(urls);    // sends the url string to the browser
