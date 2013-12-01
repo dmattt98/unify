@@ -17,7 +17,7 @@ app.get('/one/*', function(req, res) {    // express routing to everything in /o
 	console.log('rqst: '.green + 'a request for \'' + req.params[0].yellow + '\' was made');    // logs to the console the url requested
 
 	var requested = req.params[0].split("/"),    // splits the request into individual library names
-		libraries = [],
+		libraries = [],    // empty arrays to store future information in
 		versions = [],
 		paths = [];
 
@@ -32,12 +32,12 @@ app.get('/one/*', function(req, res) {    // express routing to everything in /o
 		}
 	}
 
-	for(var i = 0; i < libraries.length; i++) {
+	for(var i = 0; i < libraries.length; i++) {    // creates the file path for the library
 		paths.push('./libraries/' + libraries[i] + '/' + versions[i] + '.js');
 	}
 
-	async.map(paths, fs.readFile, function(error, result) {    // async's map function gets the results from the request.get function and puts it into one array
-		res.end(result.join('\n'));   // server the browser the appended libraries
+	async.map(paths, fs.readFile, function(error, result) {    // async's map function gets the results from the fs.readFile function and puts it into one array
+		res.end(result.join('').replace(/\r?\n|\r/g, ' '));   // server the browser the appended libraries
 	});
 });
 
