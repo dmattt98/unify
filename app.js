@@ -1,7 +1,8 @@
 var libs = require(__dirname + '/libraries.json'),    // get json file where all libraries are stored
 	express = require('express'),
 	app = express(),
-	request = require('request');
+	request = require('request'),
+	mime = require('mime');
 
 app.get('/one/*', function(req, res) {
 
@@ -11,11 +12,18 @@ app.get('/one/*', function(req, res) {
 		urls = '';
 
 	for(var i = 0; i < requested.length; i++) {    // for loop to add the library url to urls separated by <br> tags
-		if (typeof libs[requested[i]] !== 'undefined')    // checks to make sure the library is listed
-			urls += (libs[requested[i]] + '<br>');
+		if (typeof libs[requested[i].replace('.js', '')] !== 'undefined')    // checks to make sure the library is listed
+			urls += (libs[requested[i].replace('.js', '')] + ' ');
 	}
 
-	res.send(urls);    // sends the url string to the browser
+	res.status(200);
+	res.format({
+		'application/javascript': function() {
+			res.send(urls);
+		}
+	});
+	console.log(res.get('Content-Type'));
+	res.end();
 });
 
 app.listen(3000);
